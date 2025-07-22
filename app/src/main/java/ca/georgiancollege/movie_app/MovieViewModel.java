@@ -1,5 +1,7 @@
 package ca.georgiancollege.movie_app;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -42,10 +44,14 @@ public class MovieViewModel extends ViewModel {
             public void onResponse(Call call, Response response) throws IOException {
                 if(response.isSuccessful() && response.body() != null) {
                     String json = response.body().string();
+                    Log.d("MovieViewModel", "Response JSON: " + json);
                     ArrayList<Movie> movies = parseMovies(json);
                     moviesLiveData.postValue(movies);
+                } else {
+                    Log.d("MovieViewModel", "Response failed or empty body");
                 }
             }
+
         });
     }
 
