@@ -17,12 +17,16 @@ import ca.georgiancollege.movie_app.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    private MovieViewModel movieViewModel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+        movieViewModel = new ViewModelProvider(this).get(MovieViewModel.class); //connect mainactivity and ViewModel
+
         setContentView(binding.getRoot());
 
         // Search button click
