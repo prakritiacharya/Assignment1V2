@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.Observer;
+import ca.georgiancollege.movie_app.MovieViewModel;
 
 
 import ca.georgiancollege.movie_app.databinding.ActivityMainBinding;
@@ -43,9 +44,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-    }
-    private void searchMovies(String query) {
+
+/*    private void searchMovies(String query) {
         Toast.makeText(this, "Searching for: " + query, Toast.LENGTH_SHORT).show();
         // API call
+    }*/
+        movieViewModel.getMovies().observe(this, movies -> {
+            if (movies != null && !movies.isEmpty()) {
+                Toast.makeText(this, "Movies found: " + movies.size(), Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "No movies found", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

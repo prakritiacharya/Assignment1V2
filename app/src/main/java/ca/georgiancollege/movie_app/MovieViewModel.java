@@ -16,6 +16,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
 public class MovieViewModel extends ViewModel {
     private MutableLiveData<ArrayList<Movie>> moviesLiveData = new MutableLiveData<>();
     private OkHttpClient client = new OkHttpClient();
