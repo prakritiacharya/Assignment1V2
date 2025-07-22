@@ -33,13 +33,15 @@ public class MainActivity extends AppCompatActivity {
         //click listener
         binding.btnSearch.setOnClickListener(v -> {
             String query = binding.editSearch.getText().toString().trim();
+
             if (!query.isEmpty()) {
-                //  method to search movies with 'query'
-                searchMovies(query);
+                String apiKey = "77ef3890";
+                movieViewModel.fetchMovies(query, apiKey);
             } else {
                 Toast.makeText(this, "Please enter a movie name", Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
     private void searchMovies(String query) {
