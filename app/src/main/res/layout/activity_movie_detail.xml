@@ -39,5 +39,23 @@
             android:layout_height="35dp"
             android:text="Type"
             android:textSize="18sp" />
+
+        <TextView android:id="@+id/movieDirector"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Type"
+            android:textSize="18sp" />
+
+        <TextView android:id="@+id/movieRating"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Type"
+            android:textSize="18sp" />
+
+        <TextView android:id="@+id/moviePlot"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Type"
+            android:textSize="18sp" />
     </LinearLayout>
 </ScrollView>

@@ -15,6 +15,9 @@ public class MovieDetailActivity extends AppCompatActivity {
     public static final String EXTRA_YEAR = "extra_year";
     public static final String EXTRA_TYPE = "extra_type";
     public static final String EXTRA_POSTER = "extra_poster";
+    public static final String EXTRA_DIRECTOR = "extra_director";
+    public static final String EXTRA_RATING = "extra_rating";
+    public static final String EXTRA_PLOT = "extra_plot";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
