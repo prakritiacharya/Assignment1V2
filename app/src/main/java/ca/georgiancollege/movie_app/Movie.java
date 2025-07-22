@@ -10,18 +10,22 @@ public class Movie {
     private String plot;
 
     // Constructor
-    public Movie(String title, String year, String imdbID, String type, String poster) {
-        this.Title = title;
-        this.Year = year;
-        this.imdbID = imdbID;
-        this.Type = type;
-        this.Poster = poster;
+    public Movie(String title, String year, String type, String poster, String director, String rating, String plot) {
+        this.title = title;
+        this.year = year;
+        this.type = type;
+        this.poster = poster;
+        this.director = director;
+        this.rating = rating;
+        this.plot = plot;
     }
 
     // Getters
-    public String getTitle() { return Title; }
-    public String getYear() { return Year; }
-    public String getImdbID() { return imdbID; }
-    public String getType() { return Type; }
-    public String getPoster() { return Poster; }
+    public String getTitle() { return title; }
+    public String getYear() { return year; }
+    public String getType() { return type; }
+    public String getPoster() { return poster; }
+    public String getDirector() { return director; }
+    public String getRating() { return rating; }
+    public String getPlot() { return plot; }
 }
