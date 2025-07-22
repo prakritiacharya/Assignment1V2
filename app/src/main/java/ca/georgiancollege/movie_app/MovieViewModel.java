@@ -37,7 +37,8 @@ public class MovieViewModel extends ViewModel {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                // Optional: handle failure, maybe post empty list or error state
+                Log.e("MovieViewModel", "API call failed: " + e.getMessage());
+                moviesLiveData.postValue(null);
             }
 
             @Override
@@ -48,8 +49,8 @@ public class MovieViewModel extends ViewModel {
                     ArrayList<Movie> movies = parseMovies(json);
                     moviesLiveData.postValue(movies);
                 } else {
-                    Log.d("MovieViewModel", "Response failed or empty body");
-                }
+                    Log.e("MovieViewModel", "API call unsuccessful or empty body");
+                    moviesLiveData.postValue(null);                }
             }
 
         });

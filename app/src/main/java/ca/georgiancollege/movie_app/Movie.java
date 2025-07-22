@@ -1,11 +1,13 @@
 package ca.georgiancollege.movie_app;
 
 public class Movie {
-    private String Title;
-    private String Year;
-    private String imdbID;
-    private String Type;
-    private String Poster;
+    private String title;
+    private String year;
+    private String type;
+    private String poster;
+    private String director;
+    private String rating;
+    private String plot;
 
     // Constructor
     public Movie(String title, String year, String imdbID, String type, String poster) {

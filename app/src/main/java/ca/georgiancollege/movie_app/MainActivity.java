@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Setup RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        movieAdapter = new MovieAdapter(new ArrayList<>());
+        movieAdapter = new MovieAdapter();
         recyclerView.setAdapter(movieAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 
         // Get ViewModel instance
         movieViewModel = new ViewModelProvider(this).get(MovieViewModel.class);
