@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Movie</string>
+    <string name="movie_app">Movie App</string>
+    <string name="hint_search">Enter movie title</string>
 </resources>
